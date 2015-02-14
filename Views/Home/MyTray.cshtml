@@ -1,0 +1,28 @@
+﻿@model List<ProjectEAD.Order>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<table>
+    <tr>
+        <td>Food</td>
+        <td>Price</td>
+    </tr>
+    @{foreach (var x in Model)
+    {
+        <tr>
+
+
+            <td>@x.Name</td>
+            <td>@x.Quantity</td>
+
+        </tr>
+    }
+
+    }
+</table>
+
+<br />
+ Total Amount:
+@ViewBag.amount

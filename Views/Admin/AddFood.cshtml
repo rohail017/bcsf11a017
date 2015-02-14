@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminPage.cshtml";
+}
+<style>
+    article, aside, figure, footer, header, hgroup,
+    menu, nav, section {
+        display: block;
+    }
+</style>
+
+
+<form method="post" action="/Admin/SaveToDB" enctype="multipart/form-data" class=" col-md-12">
+    Category<input type="text" name="type" /><br /><br />
+
+    Name<input type="text" name="fname" /><br /><br />
+    Price<input type="text" name="fprice" /><br /><br />
+    <input type="file" name="pic"><br /><br />
+    <input type="submit" value="Upload" /> <br /><br />
+
+
+</form>
+<div class=" col-md-12" id="d1">
+
+</div>

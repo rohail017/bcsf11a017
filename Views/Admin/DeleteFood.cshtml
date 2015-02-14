@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminPage.cshtml";
+}
+
+
+
+
+<table>
+    <tr>
+        <td>Action</td>
+        <td>Name</td>
+        <td>Type</td>
+        <td>Price</td>
+    </tr>
+    @{foreach (var x in Model)
+    {
+        <tr>
+            <td>
+                <a href="/Admin/Delete/@x.Id">Delete</a>
+            </td>
+            <td>@x.Id</td>
+            <td>@x.Name</td>
+            <td>@x.Type</td>
+            <td>@x.Price</td>
+
+        </tr>
+    }
+
+    }
+</table>
+

@@ -1,0 +1,27 @@
+﻿@model ProjectEAD.Models.Food
+
+@{
+    Layout = "~/Views/Shared/_AdminPage.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Edit/m=>m.Id", "Admin", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+
+
+    @Html.LabelFor(m => m.Id)
+    @Html.TextBoxFor(m => m.Id)
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+    @Html.LabelFor(m => m.Type)
+    @Html.TextBoxFor(m => m.Type)
+
+    @Html.LabelFor(m => m.Price)
+    @Html.TextBoxFor(m => m.Price)
+
+    <input type="submit" value="Submit" />
+}
+
+
+

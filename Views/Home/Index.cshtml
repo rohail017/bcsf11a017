@@ -1,0 +1,254 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    @*<link rel="stylesheet" href="/Content/homeslides/superslides.css">
+    
+    <script src="/Content/homeslide/jquery.easing.min"></script>
+    <script src="Content/homeslide/jquery.animate-enhanced.min.js"></script>
+    <script src="Content/homeslide/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>*@
+    <script>
+        $(document).ready(function () {
+            $("#b1").hide(function () {
+
+
+            });
+
+        });
+    </script>
+    @*<script>
+        $(document).ready(function () {
+            $("#h1").hide(function () {
+
+
+            });
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#p1").hide(function () {
+            });
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#s1").hide(function () {
+            });
+
+        });
+    </script>*@
+    <script>
+        $(document).ready(function () {
+            $(".slide").hide();
+        })
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#b1").fadeIn(1000);
+            $("#b1").delay(2000).fadeOut(900);
+            $("#b1").fadeTo(1, 1, pizza);
+
+
+        });
+
+        function pizza() {
+            $("#p1").fadeIn(900);
+            $("#p1").delay(2000).fadeOut(900);
+            $("#p1").fadeTo(1, 1, shawarma);
+
+        }
+        function shawarma() {
+            $("#s1").fadeIn(900);
+            $("#s1").delay(2000).fadeOut(900);
+            $("#s1").fadeTo(1, 1, honda);
+        }
+        function burger() {
+            $("#b1").fadeIn(1000);
+            $("#b1").delay(2000).fadeOut(900);
+            $("#b1").fadeTo(1, 1, pizza);
+        }
+        function honda() {
+            $("#h1").fadeIn(1000);
+            $("#h1").delay(2000).fadeOut(900);
+            $("#h1").fadeTo(1, 1, burger);
+        }
+    </script>>
+
+
+  
+    
+   
+  
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style=" background-color:blue">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("FastEase Eat Healthy", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse " style="background-color:blue">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Deals", "Deals", "Home")</li>
+                    <li>@Html.ActionLink("Menu", "Menu", "Home")</li>
+                    <li>@Html.ActionLink("Price Checker", "Order", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Food Gallary", "Fanncy","Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+   
+
+   
+    
+   
+
+    <div id="slides">
+        <div >
+           
+            <img src="/Content/Images/Chicago.jpg" id="b1" class="slide" alt="Cinelli" width="1100" height="682">
+            <img src="/Content/Images/ita.jpg" id="s1" class="slide" width="1100" height="682" alt="Surly">
+            <img src="/Content/Images/b1.jpg" id="p1" class="slide" width="1100" height="682" alt="Cinelli">
+            <img src="/Content/Images/s1.jpg" id="h1" class="slide" width="1100" height="682" alt="Affinity">
+                
+</div>
+        <nav class="slides-navigation">
+            <a href="#" class="next">Next</a>
+            <a href="#" class="prev">Previous</a>
+        </nav>
+    </div>
+    
+</body>
+</html>
+
+
+@*<!--
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Full Slider - Start Bootstrap Template</title>
+
+    <!-- Custom CSS -->
+    <link href="/Content/full-slider.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        })
+    </script>
+    <!-- jQuery -->
+    <script src="Content/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="Content/bootstrap2.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+
+</head>
+
+
+
+
+    <!-- Full Page Image Background Carousel Header -->
+  
+    <header id="myCarousel" class="carousel" >
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image: url(Content/Images/b1.jpg)"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 1</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image: url(Content/Images/b1.jpg);"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 2</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image: url(Content/Images/b1.jpg); "></div>
+                <div class="carousel-caption">
+                    <h2>Caption 3</h2>
+                </div>
+            </div>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            <img src="/Content/Images/bw.jpg" alt="\Views\Home" />
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div> -->
+-->
+-->*@

@@ -1,0 +1,62 @@
+﻿@model ProjectEAD.Models.Food
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    
+    <script>
+        function find() {
+        
+                
+                var s = $("#type").val();
+                
+                var a;
+                $.getJSON("/Home/getList/?type=" + s, function (data) {
+                        $("#f").append('<option>-Select Item-</option>');
+                        $.each(data, function (i, item) {
+                            $("#f").append('<option value=' + item.Id + '>' + item.Name + '</option>');
+                            
+                            
+                          //  alert('Id = ' + itme.Price + " Name = " + item.Name);
+                        });
+                       // alert("" + a);
+                });
+              
+              
+        }
+    </script>
+    <script>
+        function chkPrice() {
+
+
+            var s = $("#f").val();
+           
+            var a;
+            
+            $.getJSON("/Home/getPrice/?id=" + s, function (data) {
+                    $("#p1").text("Rs: "+data);
+                  
+
+                    //  alert('Id = ' + itme.Price + " Name = " + item.Name);
+                });
+                // alert("" + a);
+            
+        }
+    </script>
+   
+
+
+    <h1 style="background-color:burlywood;font-style:initial;font-family:'Comic Sans MS';text-align:center">FastEase Search</h1>
+
+    
+        Type <select id="type" onchange="find()" style="color:black">
+    <option value="burger">Burger</option>
+    <option value="pizza">Pizza</option>
+    <option value="more">More</option>
+
+    
+</select>
+        Name<select id="f" style="color:black"></select><br />
+        <input type="submit" value="Check Price" onclick="chkPrice()"/>
+    
+    <p id="p1"></p>
